@@ -1,295 +1,34 @@
-#root {
-  max-width: 1280px;
+.container {
+  display: flex;
+  justify-content: flex-start;
+
+  gap: 100px;
+  align-items: center;
   margin: 0 auto;
-  padding: 0px;
-  text-align: center;
+  min-height: 100vh;
+  max-width: 1280px;
 }
 
-.logo {
-  height: 6em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.eye-container {
-  margin-top: 3vw;
-  position: relative;
-  width: 100%;
-  height: max-content;
-  display: flex;
-  justify-content: center;
-  gap: 4vw;
-}
-
-@media screen and (min-width: 1280px) {
-  .eye-container {
-    gap: 40px;
-  }
-}
-
-.square {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 19vw;
-  width: 19vw;
-  max-width: 470px;
-  max-height: 470px;
-  position: absolute;
-}
-
-.rotate-animation {
-  animation-name: rotate;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(45deg);
-  }
-  50% {
-    transform: rotate(90deg);
-  }
-  75% {
-    transform: rotate(135deg);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
-
-.rotate-animation2 {
-  animation-name: rotate2;
-  animation-duration: 3s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  transform-origin: left top 10px 10px;
-}
-
-@keyframes rotate2 {
-  0% {
-    transform: rotate(-0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(-60deg);
-  }
-  75% {
-    transform: rotate(-137deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-
-.border-primary {
-  border: 3px solid var(--primary);
-}
-
-.border-secondary {
-  border: 3px solid var(--secondary);
-  rotate: 45deg;
-}
-
-.border-tertiary {
-  border: 3px solid var(--tertiary);
-  rotate: 16.49deg;
-}
-
-.moving-animation {
-  animation-name: moving;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-}
-
-@keyframes moving {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translate(-5px, 10px);
-  }
-  50% {
-    transform: translate(0px, 20px);
-  }
-  75% {
-    transform: translate(5px, 10px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-
-.robot {
-  height: max-content;
-  width: max-content;
-  position: relative;
+.container-gray {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  background: #ffffff;
   align-items: center;
-  gap: 3vw;
-
   margin: 0 auto;
+  min-height: 100vh;
+  -webkit-clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
 }
 
-.eye {
-  position: relative;
-  max-width: 55px;
-  max-height: 55px;
-  width: 5vw;
-  height: 5vw;
-  border-radius: 50%;
-  background-color: var(--tertiary);
-  border: 4px solid var(--secondary);
-  overflow: hidden;
-}
 
-.left-eye {
-  position: relative;
-  max-width: 45px;
-  max-height: 45px;
-  width: 4vw;
-  height: 4vw;
 
-  border-radius: 50%;
-  border: 4px solid var(--primary);
 
-  overflow: hidden;
-}
 
-.iris {
-  position: absolute;
-  /* top: calc(50% - 7.5px);
-  left: calc(50% - 7.5px); */
-  top: 40%;
-  left: 40%;
-  width: 30%;
-  height: 30%;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
 
-.pupil-primary {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px solid var(--primary);
-  position: absolute;
-  bottom: 2px;
-}
 
-.pupil-secondary {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px solid var(--secondary);
-  left: 2px;
-}
 
-.pupil-tertiary {
-  position: absolute;
-
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px solid var(--tertiary);
-  right: 2px;
-}
-
-.pupil {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: rgb(255, 255, 255);
-  transform: translate(-50%, -50%);
-}
-
-.upper-teeth {
-  position: absolute;
-  top: 87%;
-  rotate: 180deg;
-  height: 35%;
-  width: auto;
-}
-.below-teeth {
-  position: absolute;
-  top: 100%;
-  height: 35%;
-  width: auto;
-}
-.teeth_container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex;
-  align-items: center;
-  gap: -20px;
-}
-
-.robot:hover .upper-teeth {
-  transform: translateY(
-    50%
-  ); /* Adjust the value to control the amount of movement */
-  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
-}
-
-.robot:hover .below-teeth {
-  transform: translateY(
-    100%
-  ); /* Adjust the value to control the amount of movement */
-  transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
-}
-.robot-container {
-  position: fixed;
-  top: 50%;
-  left: 25%;
-  height: 23vw;
-  width: 23vw;
-  z-index: 20;
-  transform: translate(-50%, -50%);
-}
 
 .text-container {
   white-space: nowrap;
@@ -316,6 +55,13 @@
 }
 
 .wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
 }
 
 .square1 {
@@ -326,40 +72,9 @@
   left: 100px;
 }
 
-.square2 {
-  position: absolute;
-  z-index: 0;
-  bottom: 0px;
-  width: 200px;
-  height: auto;
-  left: -40px;
-}
 
-.square3 {
-  position: absolute;
-  z-index: 0;
-  top: 120px;
-  width: 200px;
-  height: auto;
-  left: 200px;
-}
 
-.square4 {
-  position: absolute;
-  z-index: 0;
-  top: 200px;
-  width: 200px;
-  height: auto;
-  left: -20px;
-}
-.square5 {
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  width: 200px;
-  height: auto;
-  right: 20px;
-}
+
 
 .MyAwesomeParallax {
   position: fixed;
@@ -376,10 +91,4 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-
-.block {
-  position: absolute;
-  bottom: 0;
-  left: 0;
 }
